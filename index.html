@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadoo 👽 - Koi Mil Gaya Interface</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Intro Screen -->
+  <div id="intro">
+    <div id="intro-box">
+      <h1>PRESS ENTER TO CONNECT</h1>
+      <p class="sub">initializing deep space array...</p>
+      <div id="manual">
+        <p><span class="mk">B C D E F</span> — play signal tones</p>
+        <p><span class="mk">SPACE</span> — transmit sequence</p>
+        <p><span class="mk">ESC</span> — clear sequence</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Interface -->
+  <div id="interface" class="off">
+
+
+    <!-- Q1: Top-Left — RECEIVING -->
+    <section id="q1" class="quad">
+      <h2 class="qlabel">RECEIVING</h2>
+      <div id="recv-grid" class="wave-grid"></div>
+      <div class="bar"><div class="bar-inner" id="recv-bar"></div></div>
+    </section>
+
+    <!-- Q2: Top-Right — SENDING -->
+    <section id="q2" class="quad">
+      <h2 class="qlabel">SENDING</h2>
+      <div id="send-grid" class="wave-grid"></div>
+      <div class="bar"><div class="bar-inner" id="send-bar"></div></div>
+    </section>
+
+    <!-- Q3: Bottom-Left — Signal Scope -->
+    <section id="q3" class="quad">
+      <canvas id="scope"></canvas>
+    </section>
+
+    <!-- Q4: Bottom-Right — Telemetry -->
+    <section id="q4" class="quad">
+      <div id="telem">
+        <div id="telem-data">
+          <p>UPLINK = <span id="t-up">YES</span></p>
+          <p>AZIM. = <span id="t-az">0°</span></p>
+          <p>INC. = <span id="t-in">0° POS</span></p>
+          <p>DEC = <span id="t-de">0° NEG</span></p>
+          <p>&nbsp;</p>
+          <p>SIGNAL = <span id="t-sig">0 dB</span></p>
+        </div>
+        <div id="telem-freq">
+          <p id="fq-B">B:066</p>
+          <p id="fq-C">C:067</p>
+          <p id="fq-D">D:068</p>
+          <p id="fq-E">E:069</p>
+          <p id="fq-F">F:070</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom: Key Input -->
+    <div id="keybar">
+      <div class="left-bar">
+        <span id="keybar-label">PRESS KEYS</span>
+        <span id="keybar-seq"></span>
+      </div>
+      <div id="keypad">
+        <button class="kbtn" data-key="B">B</button>
+        <button class="kbtn" data-key="C">C</button>
+        <button class="kbtn" data-key="D">D</button>
+        <button class="kbtn" data-key="E">E</button>
+        <button class="kbtn" data-key="F">F</button>
+        <button class="kbtn action-btn" data-key=" ">TRANSMIT</button>
+        <button class="kbtn action-btn" data-key="Escape">CLEAR</button>
+      </div>
+      <div id="keybar-help">
+        <span>[ B, C, D, E, F: Tones ]</span>
+        <span>[ SPACE: Transmit ]</span>
+        <span>[ ESC: Clear ]</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
