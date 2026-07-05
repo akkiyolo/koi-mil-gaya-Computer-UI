@@ -1,4 +1,6 @@
 # Jadoo Calling Interface 👽💻
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/3e560c7b-9ef4-45a9-90b2-9b6d714249d9" />
+
 An interactive, movie-authentic replica of the alien communication interface from the classic Bollywood sci-fi movie *Koi... Mil Gaya*. 
 
 Built entirely with clean, vanilla HTML5, CSS3, and JavaScript—without bloated libraries.
